@@ -34,10 +34,10 @@ This function(uses --address flag) takes the list of data returned from dateReda
 This function(uses --phones flag) takes the list returned from the previous function and searches for phone numbers in the list using regular expressions. If there is a match, then the phone number is redacted with Unicode █ (U+2588).  
 
 ***genderRedaction(data):***  
-This  function(uses –gender flag) takes the list of data and searches for gender related words like he|He|she|She|Him|him|her|Her|girl|Girl|boy|Boy|male|Male|female|Female|males|females|Males|Females|Women|Men|Woman|Man|women|men|woman|man and redacts with Unicode █ (U+2588).  
+This  function(uses --gender flag) takes the list of data and searches for gender related words like he|He|she|She|Him|him|her|Her|girl|Girl|boy|Boy|male|Male|female|Female|males|females|Males|Females|Women|Men|Woman|Man|women|men|woman|man and redacts with Unicode █ (U+2588).  
 
 ***conceptRedaction(data,concept):***  
-This function(uses –concept flag along with concept) takes one word or phrase that represents a concept. A concept is either an idea or theme. Any word of the input files that refer to this concept word will be redacted with Unicode █ (U+2588).  
+This function(uses --concept flag along with concept) takes one word or phrase that represents a concept. A concept is either an idea or theme. Any word of the input files that refer to this concept word will be redacted with Unicode █ (U+2588).  
 
 ***statistics(li):***  
 In nameRedaction() dateRedaction() addressRedaction() phoneRedaction() genderRedaction() and conceptRedaction() functions, statistical data regarding the frequency is calculated like:  
@@ -52,6 +52,7 @@ This function is used to write the redacted data to a .redacted file. Meaning ea
 1.	Phone numbers either be in ‘123 456 7890’ or ‘123-456-7890’ or ‘123.456.7890’ format and will not be repeated more than once in the text file.  
 2.	Dates will be in the format : ‘19 Jan 2001', '2005', 'Sunday', 'January'  
 3.	Gender words that will be present in the text files will be among   he|He|she|She|Him|him|her|Her|girl|Girl|boy|Boy|male|Male|female|Female|males|females|Males|Females|Women|Men|Woman|Man|women|men|woman|man  
+4.	Only .txt files are given as input arguments.  
 
 **Test Cases:**  
 Test cases are written in tests/test_main.py.  
