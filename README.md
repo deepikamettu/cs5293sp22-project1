@@ -49,7 +49,7 @@ The above information is appended to a list in each function and this list is pa
 This function is used to write the redacted data to a .redacted file. Meaning each redacted file will be transformed into new files of the same name with the .redacted extension and written to the files folder.  
 
 **Assumptions:**  
-1.	Phone numbers either be in ‘123 456 7890’ or ‘123-456-7890’ or ‘123.456.7890’ format and will not be repeated more than once in the text file.  
+1.	Phone numbers either be in ‘123 456 7890’ or ‘123-456-7890’ or ‘123.456.7890’ or '1234567890' format and will not be repeated more than once in the text file.  
 2.	Dates will be in the format : ‘19 Jan 2001', '2005', 'Sunday', 'January'  
 3.	Gender words that will be present in the text files will be among   he|He|she|She|Him|him|her|Her|girl|Girl|boy|Boy|male|Male|female|Female|males|females|Males|Females|Women|Men|Woman|Man|women|men|woman|man  
 4.	Only .txt files are given as input arguments.  
