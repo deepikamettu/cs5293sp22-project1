@@ -76,4 +76,5 @@ https://www.geeksforgeeks.org/get-synonymsantonyms-nltk-wordnet-python/ - used i
 https://stackoverflow.com/questions/35345761/python-re-split-vs-nltk-word-tokenize-and-sent-tokenize - used in conceptRedaction()  
 https://stackoverflow.com/questions/51166970/how-can-i-check-if-only-txt-file-exists-in-a-directory-with-python - used in test_output()  
 https://itsmycode.com/python-write-text-file/ and https://www.codegrepper.com/code-examples/python/python+create+text+file+in+specific+directory -	used in output(data)  
+https://jcharistech.wordpress.com/2019/02/18/document-redaction-sanitization-using-spacys-named-entity-recognition/ - used for name, address, date redaction
 
