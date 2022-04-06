@@ -1,0 +1,8 @@
+StackOverflow | https://stackoverflow.com/questions/210518/regex-multi-word-search | used for regular expressions in genderRedaction()  
+StackOverflow | https://stackoverflow.com/questions/35345761/python-re-split-vs-nltk-word-tokenize-and-sent-tokenize | used for splitting the data in conceptRedaction()  
+StackOverflow | https://stackoverflow.com/questions/51166970/how-can-i-check-if-only-txt-file-exists-in-a-directory-with-python | used to check if the file exists or not in test_output()  
+GeeksforGeeks | https://www.geeksforgeeks.org/get-synonymsantonyms-nltk-wordnet-python/ | used for getting the synonyms list in concetRedaction  
+Itsmycode | https://itsmycode.com/python-write-text-file/ and https://www.codegrepper.com/code-examples/python/python+create+text+file+in+specific+directory | used for writing the data to file in output()  
+jcharistech | https://jcharistech.wordpress.com/2019/02/18/document-redaction-sanitization-using-spacys-named-entity-recognition/ and https://python.hotexamples.com/examples/spacy.tokens/Doc/retokenize/python-doc-retokenize-method-examples.html | reference for redcating names,address and dates  
+PythonGuide |https://pythonguides.com/python-stderr-stdin-and-stdout/#:~:text=Python%20stderr%20is%20known%20as%20a%20standard%20error,observe%20that%20it%20print%20debug%20message%20using%20sys.stderr | reference used in statistical() function  
+Prudhvik Yarlagadda | prudhvik.yarlagadda-1@ou.edu | Helped me with writing and successfully executing concept() function  

@@ -1,0 +1,6 @@
+Number of names that are redacted: 4
+Number of genders that are redacted: 3
+Number of dates that are redacted: 2
+Number of concepts that are redacted: 1
+Number of phone numbers that are redacted: 2
+Number of address that are redacted: 2
