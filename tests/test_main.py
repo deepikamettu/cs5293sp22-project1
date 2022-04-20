@@ -1,7 +1,7 @@
 import sys
 sys.path.append('..')
 import pytest
-from project1 import redactor
+import redactor
 import os
 
 file_list = ['*.txt']
@@ -60,9 +60,9 @@ def test_genderRedaction():
         assert False
 
 def test_concept():
-    inputData = redactor.inputData(file_list)
-    conceptRedaction = redactor.conceptRedaction(inputData,concept)
-    if len(conceptRedaction) == len(inputData):
+    conceptList = ['All kids are not allowed to eat in class']
+    conceptRedaction = redactor.conceptRedaction(conceptList,concept)
+    if len(conceptRedaction) == len(conceptList):
         if '\u2588' in conceptRedaction:
             assert True
     else:
@@ -70,8 +70,8 @@ def test_concept():
 
 def test_statistics():
     filename = 'xyz'
-    os.chdir('../')
-    os.chdir('project1/')
+    #os.chdir('../')
+    #os.chdir('project1/')
     res = redactor.statistics(filename)
     res1 = os.path.exists(filename)
     if res1 == True:
@@ -82,8 +82,8 @@ def test_statistics():
 
 def test_output():
     data = ['This is a file']
-    os.chdir('../')
-    os.chdir('project1/')
+    #os.chdir('../')
+    #os.chdir('project1/')
     redactor.output(data,file_list)
     os.chdir('files/')
     li = os.listdir()
