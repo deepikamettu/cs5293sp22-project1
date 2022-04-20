@@ -12,7 +12,7 @@ nltk.download('omw-1.4')
 from nltk.corpus import wordnet
 from os import path
 
-nlp=spacy.load('en_core_web_sm')
+nlp=spacy.load('en_core_web_md')
 
 def inputData(files):
     original = []
@@ -197,21 +197,22 @@ def conceptRedaction(data,concept):
 
 
 def statistics(filename):
-    print(filename)
-    if filename == ['stdout']:
-        for i in statsList:
-            sys.stdout.write(i + '\n')
-    elif filename == ['stderr']:
-        for k in statsList:
-            sys.stderr.write(k + '\n')
-    else:
-        for i in range(len(filename)):
-                print(filename[i])
-                file = open(filename[i],"w",encoding="utf-8")
-                for j in statsList:
-                    #print(j)
-                    file.write(j + '\n')
-                file.close()
+    #print(filename)
+    for i in range(len(filename)):
+        if filename == ['stdout']:
+            for i in statsList:
+                sys.stdout.write(i + '\n')
+        elif filename == ['stderr']:
+            for k in statsList:
+                sys.stderr.write(k + '\n')
+        else:
+            for i in range(len(filename)):
+                    #print(filename[i])
+                    file = open(filename[i],"w",encoding="utf-8")
+                    for j in statsList:
+                        #print(j)
+                        file.write(j + '\n')
+                    file.close()
 
 def output(filelist,data):
     os.getcwd()
@@ -219,7 +220,7 @@ def output(filelist,data):
     res = []
     for i in filelist:
         [filenames.append(file) for file in glob.glob(i)]
-    print(filenames)
+    #print(filenames)
     for i in range(len(filenames)):
          res = [i + '.redacted' for i in filenames]
     #print(res)
