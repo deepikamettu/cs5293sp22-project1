@@ -97,8 +97,7 @@ def phoneRedaction(data):
     phoneNumbersList = []
     originalData = data
     for i in originalData:
-        #phoneNumbersList = re.findall(r' ([+]?\d{0,2}[ .-]?\(?\d{3,4}\)?[ .-]\d{3,4}[ .-]\d{4}|\d{10})',i)
-        phoneNumbersList = re.findall(r'/^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$/',i)
+        phoneNumbersList = re.findall(r' ([+]?\d{0,2}[ .-]?\(?\d{3,4}\)?[ .-]\d{3,4}[ .-]\d{4}|\d{10})',i)
         count = count + len(phoneNumbersList)
         for j in phoneNumbersList:
             jLength = len(j)
@@ -135,7 +134,9 @@ def conceptRedaction(data,concept):
     [redact.append(l.name()) for k in concept for syn in wordnet.synsets(k) for l in syn.lemmas()] # redact list contains all the syns
     [data2.append(nlp(str(i))) for i in data]
     for q in data2:
-        sent_token_data = nltk.sent_tokenize(str(q))
+        bol = True
+        strings = str(q)
+        sent_token_data = strings.splitlines(bol)
         for s in sent_token_data:
             for t in redact:
                 if t in s:

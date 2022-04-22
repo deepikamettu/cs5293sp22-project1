@@ -69,11 +69,9 @@ def test_concept():
         assert False
 
 def test_statistics():
-    filename = 'xyz'
-    #os.chdir('../')
-    #os.chdir('project1/')
+    filename = ['xyz']
     res = redactor.statistics(filename)
-    res1 = os.path.exists(filename)
+    res1 = os.path.exists(filename[0])
     if res1 == True:
         assert True
     else:
