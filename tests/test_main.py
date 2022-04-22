@@ -81,11 +81,11 @@ def test_statistics():
 
 
 def test_output():
-    data = ['This is a file']
-    #os.chdir('../')
-    #os.chdir('project1/')
-    redactor.output(data,file_list)
-    os.chdir('files/')
+    data = ['This is first file','This is second file']
+    loc = 'files/'
+    file_list = ['1.txt','2.txt']
+    redactor.output(file_list,data,loc)
+    os.chdir(loc)
     li = os.listdir()
     for i in li:
         if i.endswith('.redacted'):
